@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://briancroxall.net/w20dh/cbml.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:cbml="http://www.cbml.org/ns/1.0"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      
+      <fileDesc>
+         <!-- this is about the encoded file -->
+         <titleStmt>
+            <title>Peanuts 1992-03-05 (digital transcription)</title><!--Put the date of the comic's original appearance here, in the 1992-03-05 format -->
+            <respStmt>
+               <resp>encoder</resp>
+               <persName ref="#r-AK">Ashlin Kaufman</persName><!-- Put your name here and change the value of ref to your r-tag (e.g., #r-HJ, #r-DM, #r-AL, #r-KS) -->
+            </respStmt>
+            <respStmt>
+               <resp>oversight</resp>
+               <persName ref="https://orcid.org/0000-0001-5602-6830">Brian Croxall</persName>
+            </respStmt>
+         </titleStmt>
+         
+         <publicationStmt> 
+            <publisher>
+               <orgName ref="https://briancroxall.net/w22dh">Digital Humanities 315, Winter 2022</orgName>
+            </publisher>
+            <availability status="free">
+               <!-- alternative values are "restricted" and "unknown" -->
+               <!-- example availability info -->
+               <licence>
+                  This work is licensed under a Creative Commons Attribution 4.0 International License. <ref target="https://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons licence Attribution-BY 4.0</ref>
+                  <p>Please acknowledge Digital Humanities 315, Winter 2020-2022 when re-using or re-publishing.</p>
+               </licence>
+            </availability>
+            <!-- project assigned ID -->
+            <idno type="local">Peanuts1992-03-05</idno><!-- Update this to be Peanuts1992-03-05. Note that there is no space between Peanuts and the year. -->
+         </publicationStmt>
+         
+         <!-- This is about the source -->
+         <sourceDesc>
+            <bibl><title level="a">Peanuts 1992-03-05</title><!-- Title of the strip here, which will just be "Peanuts 1992-03-05" with the date in filled in -->. In <author ref="http://viaf.org/viaf/36924438">Charles M. Schulz</author>, <title>The Complete Peanuts: 1991 to 1992</title><!-- change the span of years if working in a different volume -->. <publisher>Fantagraphics Books</publisher>, <date>2014</date><!-- Change this publication date if working in a different volume -->.</bibl>
+         </sourceDesc>   
+      </fileDesc>
+      
+      <!-- This is a call to the external taxonomy that we're using: https://github.com/briancroxall/peanuts-taxonomy/blob/master/peanuts-taxonomy.xml. -->
+      <encodingDesc>
+         <classDecl>
+            <xi:include href="https://raw.githubusercontent.com/briancroxall/peanuts-taxonomy/master/peanuts-taxonomy.xml">
+               <xi:fallback>
+                  <p>ERROR: could not find taxonomies file, which should appear in this space.</p>
+               </xi:fallback>
+            </xi:include> 
+         </classDecl>
+      </encodingDesc>
+      
+      <!-- this is a list of the different revisions the file has gone through -->
+      <revisionDesc>
+         <change who="#r-EM" when="2020-01-27">Made template</change>
+         <change who="#r-BC" when="2020-02-05">Updated template</change>
+         <change who="#r-BC" when="2020-02-07">Updated template</change>
+         <change who="#r-BC" when="2020-02-10">Updated template</change>
+         <change who="#r-BC" when="2020-02-13">Updated template</change>
+         <change who="#r-BC" when="2020-02-18">Updated template</change>
+         <change who="#r-BC" when="2021-02-08">Updated template</change>
+         <change who="#r-BC" when="2021-02-18">Updated template</change>
+         <change who="#r-BC" when="2022-02-10">Updated template</change>
+         <change who="#r-AK" when="2022-06-30">Initial encoding</change><!-- Put in the date you make a revision in 1992-03-05 format and your r-name in "who." Change "Initial encoding" to something more appropriate if necessary. (Generally, this only happens when you're coming back to make changes to something on a different date.)-->
+      </revisionDesc>
+   </teiHeader>
+   
+   <!-- This points to a copy of the original image. -->
+   <facsimile>
+      <graphic url="https://www.gocomics.com/peanuts/1992/03/05"/>
+   </facsimile>
+   
+   <text>
+      <body>
+         
+         <head><emph>Peanuts</emph>, <date when="1992-03-05">5 March 1992</date></head>
+         
+         <div type="panelGrp" xml:id="Peanuts1992-03-05" ana="#a-baseball #s-outside">
+            
+            <cbml:panel n="1" characters="#c-cb">
+               <note resp="#r-AK" type="panelDesc">CB points at the ground. He's wearing his baseball cap.</note>
+               <cbml:balloon type="speech" who="#c-cb">I REMEMBER NOW! WHEN WE LOST OUR LAST GAME, I SLAMMED MY GLOVE ON THE GROUND!</cbml:balloon>
+               <!-- In addition to <cbml:balloon>, you also have the choice of <cbml:caption> for text that is not in a speech balloon (this will probably be incredibly rare in our corpus), <sound>, <figure> for music, or <floatingText type="diegetic">. -->
+            </cbml:panel>
+            
+            <cbml:panel n="2" characters="#c-cb" ana="#tr-act2act">
+               <note resp="#r-AK" type="panelDesc">CB kicks the air.</note>
+               <cbml:balloon type="speech" who="#c-cb">THEN I KICKED IT ACROSS THE FIELD!</cbml:balloon>
+            </cbml:panel>
+            
+            <cbml:panel n="3" characters="#c-cb" ana="#tr-act2act">
+               <note resp="#r-AK" type="panelDesc">CB sprints across the panel.</note>
+               <cbml:balloon type="speech" who="#c-cb">AND THERE IT IS, RIGHT WHERE I LEFT IT!</cbml:balloon>
+               <docDate>3-5</docDate>
+            </cbml:panel>
+            
+            <cbml:panel n="4" characters="#c-object" ana="#tr-sub2sub">
+               <note resp="#r-AK" type="panelDesc"></note>
+               <cbml:balloon type="thought" who="#c-object">RATS! I COULDN'T CRAWL FAST ENOUGH..</cbml:balloon>
+               <docAuthor>SCHULZ</docAuthor>
+            </cbml:panel>
+            
+         </div>
+      </body>
+   </text>
+</TEI>

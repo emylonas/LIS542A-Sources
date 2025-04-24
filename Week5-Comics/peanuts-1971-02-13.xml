@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="https://briancroxall.net/w20dh/cbml.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:cbml="http://www.cbml.org/ns/1.0"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      
+      <fileDesc>
+         <!-- this is about the encoded file -->
+         <titleStmt>
+            <title>Peanuts 1971-02-13 (digital transcription)</title><!--Put the date of the comic's original appearance here, in the 1971-02-13 format -->
+            <respStmt>
+               <resp>encoder</resp>
+               <persName ref="#r-BC">Brian Croxall</persName><!-- Put your name here and change the value of ref to your r-tag -->
+            </respStmt>
+            <respStmt>
+               <resp>oversight</resp>
+               <persName ref="https://orcid.org/0000-0001-5602-6830">Brian Croxall</persName>
+            </respStmt>
+         </titleStmt>
+         
+         <publicationStmt> 
+            <publisher>
+               <orgName ref="https://briancroxall.net/w20dh">Digital Humanities 315, Winter 2021</orgName>
+            </publisher>
+            <availability status="free">
+               <!-- alternative values are "restricted" and "unknown" -->
+               <!-- examole availability info -->
+               <licence>
+                  This work is licensed under a Creative Commons Attribution 4.0 International License. <ref target="https://creativecommons.org/licenses/by/4.0/">Distributed under a Creative Commons licence Attribution-BY 4.0</ref>
+                  <p>Please acknowledge Digital Humanities 315, Winter 2021 when re-using or re-publishing.</p>
+               </licence>
+            </availability>
+            <!-- project assigned ID -->
+            <idno type="local">Peanuts1971-02-13</idno><!-- Update this to be Peanuts1971-02-13. Note that there is no space between Peanuts and the year. -->
+         </publicationStmt>
+         
+         <!-- This is about the source -->
+         <sourceDesc>
+            <bibl><title level="a">Peanuts 1971-02-13</title><!-- Title of the strip here, which will just be "Peanuts 1971-02-13" with the date in filled in -->. In <author ref="http://viaf.org/viaf/36924438">Charles M. Schulz</author>, <title>The Complete Peanuts: 1971 to 1972</title><!-- change the span of years if working in a different volume -->. <publisher>Fantagraphics Books</publisher>, <date>2009</date><!-- Change this publication date if working in a different volume -->.</bibl>
+         </sourceDesc>   
+      </fileDesc>
+      
+      <!-- This is a call to the external taxonomy that we're using: https://github.com/briancroxall/peanuts-taxonomy/blob/master/peanuts-taxonomy.xml. -->
+      <encodingDesc>
+         <classDecl>
+            <xi:include href="https://raw.githubusercontent.com/briancroxall/peanuts-taxonomy/master/peanuts-taxonomy.xml">
+               <xi:fallback>
+                  <p>ERROR: could not find taxonomies file, which should appear in this space.</p>
+               </xi:fallback>
+            </xi:include> 
+         </classDecl>
+      </encodingDesc>
+      
+      <!-- this is a list of the different revisions the file has gone through -->
+      <revisionDesc>
+         <change who="#r-EM" when="2020-01-27">Made template</change>
+         <change who="#r-BC" when="2020-02-05">Updated template</change>
+         <change who="#r-BC" when="2020-02-07">Updated template</change>
+         <change who="#r-BC" when="2020-02-10">Updated template</change>
+         <change who="#r-BC" when="2020-02-13">Updated template</change>
+         <change who="#r-BC" when="2020-02-18">Updated template</change>
+         <change who="#r-BC" when="2021-03-18">Initial encoding</change><!-- Put in the date you make a revision in 1971-02-13 format and your name in "who." Replace the question mark with a description of your change, which will probably be "Initial encoding."-->
+      </revisionDesc>
+   </teiHeader>
+   
+   <!-- This points to a copy of the original image. -->
+   <facsimile>
+      <graphic url="https://www.gocomics.com/peanuts/1971/02/13"/><!-- Update this URL to the proper date. Check to make sure it works. -->
+   </facsimile>
+   
+   <text>
+      <body>
+         
+         <head><emph>Peanuts</emph>, <date when="1971-02-13">13 February 1971  </date></head><!-- The title of the comic is its date. So change the two dates in this line, keeping them both in the proper format -->
+         
+         <div type="panelGrp" xml:id="Peanuts1971-02-13" ana="#s-inside #a-writing"><!-- If there is weather, a setting, visual elements, or an activity, tag them in the <div> with ana="" -->
+            
+            <cbml:panel n="1" characters="#c-sally"><!-- In each of the four panel blocks, record 1) the characters that appear in the panel.   -->
+               <note resp="#r-BC" type="panelDesc">Sally writes a letter.</note><!-- Give a quick description of what happens in this panel -->
+               <floatingText type="diegetic" subtype="letter">
+                  <body>
+                     <ab><hi rend="handwriting">Dear Valentine,</hi></ab>
+                  </body>
+               </floatingText>
+               
+               <docDate>2/13</docDate><!-- Include the date as written in the comic. Move to a different panel if needed -->
+            </cbml:panel>
+            
+            <cbml:panel n="2" characters="#c-sally" ana="#tr-m2m"><!-- In panels 2, 3, and 4, also record the transition type according to McCloud using the tr- value from the taxonomy -->
+               <note resp="#r-BC" type="panelDesc">Sally continues writing a letter.</note>
+               <floatingText type="diegetic" subtype="letter">
+                  <body>
+                     <ab><hi rend="handwriting">I love you.</hi></ab>
+                  </body>
+               </floatingText>
+            </cbml:panel>
+            
+            <cbml:panel n="3" characters="#c-sally" ana="#tr-m2m">
+               <note resp="#r-BC" type="panelDesc">Sally picks up the paper and reads it.</note>
+               
+            </cbml:panel>
+            
+            <cbml:panel n="4" characters="#c-sally" ana="#tr-m2m">
+               <note resp="#r-BC" type="panelDesc">Sally continues writing the letter.</note>
+               <floatingText type="diegetic" subtype="letter">
+                  <body>
+                     <ab><hi rend="handwriting">Whoever you are.</hi></ab>
+                  </body>
+               </floatingText>
+               <docAuthor>SCHULZ</docAuthor><!-- Include Schulz's signature. If rendered differently, encode with a <hi rend=""> element. Move this to a different panel if need be -->
+            </cbml:panel>
+            
+         </div>
+      </body>
+   </text>
+</TEI>
