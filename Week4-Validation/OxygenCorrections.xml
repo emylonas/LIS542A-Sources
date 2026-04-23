@@ -51,7 +51,7 @@
               a list of permissible attributes. 
            2. In the teiHeader, add a "ref" attribute to the author, with a link to their ORCID id,  
                which is: https://orcid.org/0000-0002-0215-4324 
-           3. Number the <div>, <header> and <p> elements using an "xml:id" attribute, so they can be 
+           3. Number the <div>, <head> and <p> elements using an "xml:id" attribute, so they can be 
               unambiguously identified and linked to.
         -->
             
