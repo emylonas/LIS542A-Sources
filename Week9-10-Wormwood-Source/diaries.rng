@@ -49,13 +49,15 @@
       </element>
 
       <element name="revisions">
-          <element name="change">
+         <oneOrMore> 
+           <element name="change">
             <attribute name="when">
               <data type="date"/>
             </attribute>
             <attribute name="who"/>
             <text/>
           </element>
+         </oneOrMore>
       </element>
 
     </element>
@@ -76,14 +78,7 @@
           <text/>
 
           <ref name="pb-element"/>
-
-          <element name="date">
-            <attribute name="when">
-              <data type="date"/>
-            </attribute>
-            <text/>
-          </element>
-
+          <ref name="date-element"/>
           <ref name="p-element"/>
         </choice>
       </oneOrMore>
@@ -111,6 +106,15 @@
 
   <define name="name-element">
     <element name="name">
+      <text/>
+    </element>
+  </define>
+  
+  <define name="date-element">
+    <element name="date">
+      <attribute name="when">
+        <data type="date"/>
+      </attribute>
       <text/>
     </element>
   </define>

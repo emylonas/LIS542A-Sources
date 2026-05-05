@@ -48,7 +48,7 @@
                         <ol>
                                                        <xsl:for-each select="//d:entries//d:name" xml:space="preserve">
                                                                 <li>
-                                                                      <xsl:value-of select="."/> (<xsl:value-of select="@role"/>)
+                                                                      <xsl:value-of select="."/> 
                                                                     </li>
                                                             </xsl:for-each>
                         </ol>
@@ -72,7 +72,7 @@
     </xsl:template>
 
     <xsl:template match="d:sourceInfo"/>
-    <!-- Empty so that their content is hidden -->
+    <!-- Empty so that any element content is hidden -->
     <xsl:template match="d:revisions"/>
 
 
@@ -92,7 +92,7 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="d:p"> <!-- Match <entry>, surround each one with an HTML <p> element and keep going  -->
+    <xsl:template match="d:p"> <!-- Match <p>, surround each one with an HTML <p> element and keep going  -->
         <p>
             <xsl:apply-templates/>
         </p>
@@ -147,8 +147,8 @@
     <!-- Catch all to see what we aren't handling -->
 
     <!-- <xsl:template match='*'>
-        QQQ-element: <xsl:value-of select="name()"/>
-        <xsl:apply-templates></xsl:apply-templates>
+        Orphan-element: <xsl:value-of select="name()"/>
+        <xsl:apply-templates/>
     </xsl:template>-->
 
 </xsl:stylesheet>
